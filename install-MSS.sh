@@ -43,7 +43,7 @@ success "done."
 
 info "Patch script."
 run_command "which patch || sudo yum -y -t install patch"
-run_command "patch -N < ${INSTALL_SCRIPT}.patch"
+run_command "patch -N < ../../${INSTALL_SCRIPT}.patch"
 success "done."
 
 info "Run install script."
