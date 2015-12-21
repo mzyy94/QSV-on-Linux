@@ -31,7 +31,7 @@ run_command "curl -L https://github.com/yasm/yasm/archive/v1.3.0.tar.gz | tar -z
 success "done."
 
 info "Copy pkg-config file."
-run_command "cp ${LIBMFX_PCFILE} /usr/lib64/pkgconfig/"
+run_command "sudo cp ${LIBMFX_PCFILE} /usr/lib64/pkgconfig/"
 success "done."
 
 info "Symlink include headers"
