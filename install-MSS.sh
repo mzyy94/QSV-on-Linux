@@ -19,8 +19,9 @@ function success() {
     echo -e "\033[1;32m$@\033[0;39m"
 }
 
-function try_command
+function run_command
 {
+	echo "> $@"
 	eval "$@"
 	if [ $? -ne 0 ]; then
 		error "Error: failed to run sript. Quitting."
@@ -28,11 +29,6 @@ function try_command
 	fi
 }
 
-function run_command
-{
-	echo "> $@"
-	try_command $@
-}
 
 info "Check MSS archive."
 run_command "md5sum --quiet -c ${MSS_FILENAME}.md5"
