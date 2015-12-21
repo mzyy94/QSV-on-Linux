@@ -19,5 +19,10 @@ Setup scripts of Intel QSV encoding for CentOS 7.1
   5. `sudo reboot`
 
 
+## Build QSV supported FFmpeg
+
+  6. `./build-ffmpeg.sh`
+
+
 ## License
 MIT
