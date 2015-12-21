@@ -1,0 +1,18 @@
+--- install_sdk_UMD_CentOS.sh	2015-06-18 20:53:50.000000000 +0900
++++ install_sdk_UMD_CentOS.sh	2015-12-20 13:36:27.000000000 +0900
+@@ -13,6 +13,7 @@
+ # install prerequisite packages
+ yum -y -t groupinstall "Development Tools"
+ yum -y -t install kernel-headers kernel-devel
++yum -y -t install mesa-dri-drivers redhat-lsb wget net-tools
+ yum -y -t install bison ncurses-devel hmaccalc zlib-devel binutils-devel elfutils-libelf-devel rpm-build redhat-rpm-config asciidoc hmaccalc perl-ExtUtils-Embed pesign xmlto audit-libs-devel binutils-devel elfutils-devel elfutils-libelf-devel newt-devel numactl-devel pciutils-devel python-devel zlib-devel
+ 
+ BUILD_ID=39163
+@@ -20,6 +21,7 @@ MILESTONE_VER=16.4.2.1
+ 
+ #install Media Server Studio packages
+ rpm -Uvh \
++--oldpackage \
+ libdrm-2.4.56-$BUILD_ID.el7.x86_64.rpm \
+ libdrm-devel-2.4.56-$BUILD_ID.el7.x86_64.rpm \
+ drm-utils-2.4.56-$BUILD_ID.el7.x86_64.rpm \
