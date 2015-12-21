@@ -25,9 +25,9 @@ function run_command
 }
 
 
-info "Clone FFmpeg and yasm."
-run_command "git submodule init"
-run_command "git submodule update --depth 1"
+info "Download FFmpeg and yasm."
+run_command "curl -L https://github.com/FFmpeg/FFmpeg/archive/n2.8.4.tar.gz | tar -zxf -"
+run_command "curl -L https://github.com/yasm/yasm/archive/v1.3.0.tar.gz | tar -zxf -"
 success "done."
 
 info "Copy pkg-config file."
