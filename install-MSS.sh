@@ -75,6 +75,11 @@ info "Run install script."
 run_command "sudo ./${INSTALL_SCRIPT}"
 success "done."
 
+info "Update installed libraries' dependency"
+run_command "echo '/opt/intel/mediasdk/lib64' | sudo tee -a /etc/ld.so.conf.d/intel-mediasdk.conf"
+run_command "sudo ldconfig"
+success "done."
+
 info "Setup kernel build."
 run_command "sudo mkdir /MSS"
 run_command "sudo chown $(whoami): /MSS"
