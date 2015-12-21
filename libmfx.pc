@@ -1,0 +1,9 @@
+prefix=/opt/intel/mediasdk
+libdir=${prefix}/lib/lin_x64
+includedir=${prefix}/include
+
+Name: libmfx
+Description: MFX static library
+Version: 2015 R6
+Libs: -L${libdir} -lmfx -lstdc++ -ldl
+Cflags: -I${includedir}
