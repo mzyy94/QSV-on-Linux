@@ -5,5 +5,5 @@ includedir=${prefix}/include
 Name: libmfx
 Description: MFX static library
 Version: 2015 R6
-Libs: -L${libdir} -lmfx -lstdc++ -ldl
+Libs: -L${libdir} -lmfx -lva -lva-drm -lstdc++ -ldl
 Cflags: -I${includedir}
